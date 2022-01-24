@@ -14,7 +14,28 @@ https://ibcprotocol.org/
 
 ## Smart Contract
 
+Smart Contract = piece of computer program that gets executed by a quorum of blockchain nodes independently in order to record the latest program state
+
+The main purpose of smart contracts is to maintain program states. State is an arbitrary piece of data that gets updated by executing a transaction. In this sense, a blockchain can be conceptualized as a database, although it’s designed to lean heavily toward data consistency and immutability, at the cost of speed and query support. Almost all blockchain protocols are designed to follow a state transfer conceptual model.
+
+Each smart contract maintains its own set of states. Most transactions submitted to a blockchain target a smart contract, with the exception of pure value transfers that do not involve smart contracts. Once a transaction is executed, the target smart contract updates its state. A smart contract can call another smart contract, in order to query the downstream contract’s state or update it.
+
 ![Smart Contract](/img/Blockchain-Smart-Contract.jpg)
+
+## Anatomy of a Smart Contract
+
+Execution of smart contracts often results in updated states
+
+The logic inside smart contracts will determine if a transaction is valid or not. Examples of an invalid transaction may include not operating on the right level of beginning state, such as attempting to spend tokens without having sufficient balance. Only valid transactions result in updated states. Invalid transactions are either rejected by the network from being included in the blockchain, or included but marked as failed, depending on different blockchain designs.
+
+Smart contracts may also publish events as a way to inform the outside world. Event listeners are notified when the block containing the transaction gets committed to the blockchain on the node.
+
+![Smart Contract 1](/img/Smart-Contract_Explained_1.png)
+
+![Smart Contract 1](/img/Smart-Contract_Explained_2.png)
+
+![Smart Contract 1](/img/Smart-Contract_Explained_3.png)
+
 
 ## CosmWasm
 
