@@ -1,13 +1,4 @@
-## CosmWasm
 
-CosmWasm, a project enabling WebAssembly (WASM) virtual machines (VMs) in the Cosmos SDK
-
-Wasm = Web Assembly
-
-Multi-Chain Contracts = Different Chain, Same Contract
-
-CosmWasm is designed and built from the ground-up to be a multi-chain solution for smart contracts.
-As it comes from the Cosmos ecosystem, it is designed for networks of blockchains, rather than siloed chains.
 
 ## Cosmos SDK
 
@@ -19,10 +10,21 @@ IBC = INTER-BLOCKCHAIN COMMUNICATION PROTOCOL
 
 https://ibcprotocol.org/
 
-![This is an image](/img/IBC.jpg)
+![IBC](/img/IBC.jpg)
 
+## Smart Contract
 
+![Smart Contract](/img/Blockchain-Smart-Contract.png)
 
+## CosmWasm
 
+CosmWasm, a project enabling WebAssembly (WASM) virtual machines (VMs) in the Cosmos SDK
+
+Wasm = Web Assembly
+
+Multi-Chain Contracts = Different Chain, Same Contract
+
+CosmWasm is designed and built from the ground-up to be a multi-chain solution for smart contracts.
+As it comes from the Cosmos ecosystem, it is designed for networks of blockchains, rather than siloed chains.
 
 
