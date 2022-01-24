@@ -12,4 +12,7 @@ As it comes from the Cosmos ecosystem, it is designed for networks of blockchain
 ### IBC
 
 IBC = INTER-BLOCKCHAIN COMMUNICATION PROTOCOL
+
 https://ibcprotocol.org/
+
+![This is an image](/img/IBC.jpg)
