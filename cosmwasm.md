@@ -1,4 +1,4 @@
-### CosmWasm
+## CosmWasm
 
 Cosmos SDK
 
