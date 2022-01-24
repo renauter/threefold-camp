@@ -32,9 +32,9 @@ Smart contracts may also publish events as a way to inform the outside world. Ev
 
 ![Smart Contract 1](/img/Smart-Contract_Explained_1.png)
 
-![Smart Contract 1](/img/Smart-Contract_Explained_2.png)
+![Smart Contract 2](/img/Smart-Contract_Explained_2.png)
 
-![Smart Contract 1](/img/Smart-Contract_Explained_3.png)
+![Smart Contract 3](/img/Smart-Contract_Explained_3.png)
 
 
 ## CosmWasm
