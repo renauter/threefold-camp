@@ -14,7 +14,7 @@ https://ibcprotocol.org/
 
 ## Smart Contract
 
-![Smart Contract](/img/Blockchain-Smart-Contract.png)
+![Smart Contract](/img/Blockchain-Smart-Contract.jpg)
 
 ## CosmWasm
 
