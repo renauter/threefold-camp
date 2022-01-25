@@ -58,12 +58,25 @@ If the state needs to be updated, it must be done via a transaction and be proce
   <img width="600" src="/img/Smart-Contract_Explained_2.jpg">
 </p>
 
-On the other hand, querying for the latest state without updating it can be accomplished much faster and involves only a single node in the network. Any node that has the smart contract installed locally can execute the query request and return the result by reading from the locally maintained state database.
+On the other hand, querying for the latest state without updating it can be accomplished much faster and involves only a single node in the network.
+Any node that has the smart contract installed locally can execute the query request and return the result by reading from the locally maintained state database.
 
 > Querying smart contracts for latest state can be accomplished with a single node
 
 <p align="center">
   <img width="600" src="/img/Smart-Contract_Explained_3.jpg">
+</p>
+
+## Smart Contract Life Cycle
+
+Before a smart contract can process transactions, it must be first deployed on the blockchain.
+The deploy process must guarantee that all blockchain nodes have exactly the same code.
+Different blockchain designs handles this requirement differently, but there are in general two approaches:
+- save the contract code itself in the blockchain which guarantees global consensus (on-chain), 
+- or let each node owner decide if the node should have the code installed locally, and use a hash-based commitment in the blockchain as reference for validating the code integrity (off-chain).
+
+<p align="center">
+  <img width="600" src="/img/Smart-Contract_Explained_4.jpg">
 </p>
 
 Source [here](https://www.kaleido.io/blockchain-blog/what-are-smart-contracts-and-how-do-they-work).
