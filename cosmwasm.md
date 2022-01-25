@@ -21,7 +21,7 @@ The main purpose of smart contracts is to maintain program states. State is an a
 Each smart contract maintains its own set of states. Most transactions submitted to a blockchain target a smart contract, with the exception of pure value transfers that do not involve smart contracts. Once a transaction is executed, the target smart contract updates its state. A smart contract can call another smart contract, in order to query the downstream contract’s state or update it.
 
 <p align="center">
-  <img width="800" src="/img/Blockchain-Smart-Contract.jpg">
+  <img width="600" src="/img/Blockchain-Smart-Contract.jpg">
 </p>
 
 ## Anatomy of a Smart Contract
@@ -32,11 +32,17 @@ The logic inside smart contracts will determine if a transaction is valid or not
 
 Smart contracts may also publish events as a way to inform the outside world. Event listeners are notified when the block containing the transaction gets committed to the blockchain on the node.
 
-<img align="center" width="800" src="/img/Smart-Contract_Explained_1.png">
+<p align="center">
+  <img width="600" src="/img/Smart-Contract_Explained_1.jpg">
+</p>
 
-![Smart Contract 2](/img/Smart-Contract_Explained_2.png#gh-light-mode-only)
+<p align="center">
+  <img width="600" src="/img/Smart-Contract_Explained_2.jpg">
+</p>
 
-![Smart Contract 3](/img/Smart-Contract_Explained_3.png)
+<p align="center">
+  <img width="600" src="/img/Smart-Contract_Explained_3.jpg">
+</p>
 
 
 ## CosmWasm
