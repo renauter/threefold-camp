@@ -30,7 +30,7 @@ The logic inside smart contracts will determine if a transaction is valid or not
 
 Smart contracts may also publish events as a way to inform the outside world. Event listeners are notified when the block containing the transaction gets committed to the blockchain on the node.
 
-<img align="center" width="100" src="/img/Smart-Contract_Explained_1.png">
+<img align="center" width="800" src="/img/Smart-Contract_Explained_1.png">
 
 ![Smart Contract 2](/img/Smart-Contract_Explained_2.png#gh-light-mode-only)
 
