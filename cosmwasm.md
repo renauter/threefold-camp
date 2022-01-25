@@ -79,6 +79,12 @@ Different blockchain designs handles this requirement differently, but there are
   <img width="600" src="/img/Smart-Contract_Explained_4.jpg">
 </p>
 
+1) Hyperledger Fabric requires an elaborate administration scheme to first install the chaincode onto a blockchain node, and instantiate it globally in the chain via a special type of transaction. Because of the Fabric’s unique consensus framework design, only a selective subset of node, called endorsers, need to have the chaincode installed. Details of this design is beyond the scope of this book, but you can think of it as committee based governing rather than popular votes. Once a chaincode has been instantiated, there is a chain-wide common view to which vote should be executed when that chaincode is called. As a result, execution of the chaincode is guaranteed to be consistent on every endorser node.
+
+2) Enterprise Ethereum, with the public Ethereum inheritage, offers a simple one-step process to deploy smart contracts. The deployment is done via a transaction, making it a chain-wide operation by nature. Code for the smart contract is saved on-chain as state. As a result, all nodes are guaranteed to have access to the code and they all have the same version.
+
+3) Corda adopts a peer-to-peer transaction coordination architecture, without utilizing a globally maintain common ledger of transactions. Because of this, smart contract deployment are done on a per-node basis based on the need to perform bi-lateral or multi-lateral transactions. Similar to Fabric, the administrator of the Corda node is responsible for ensuring that the smart contract required to process a transaction has been installed on the node.
+
 Source [here](https://www.kaleido.io/blockchain-blog/what-are-smart-contracts-and-how-do-they-work).
 
 ## CosmWasm
