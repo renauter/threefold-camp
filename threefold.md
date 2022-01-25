@@ -1,5 +1,11 @@
 ## Decentralized Autonomous Organization
 
+- Decentralized = Online, global, uncensorable.
+- Autonomous = Self-governing.
+- Organization = Coordination & collaboration around shared objectives.
+
+
+
 ### Layer 2 = ecosystem security layer
 - only 1 blockchain with 100 validators, secures the multiple Layer 1 networks.
 
