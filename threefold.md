@@ -14,6 +14,10 @@
 - cloud computing layer
 - provide compute, storage and network resources to L1 and L2
 
+<p align="center">
+  <img width="800" src="/img/threefold_dao_layers.jpg">
+</p>
+
 ## Decentralized Peer-to-peer Cloud
 
 the Internet is owned by the people.
