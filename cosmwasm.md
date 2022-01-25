@@ -36,14 +36,35 @@ Smart contracts may also publish events as a way to inform the outside world. Ev
   <img width="600" src="/img/Smart-Contract_Explained_1.jpg">
 </p>
 
+A smart contract may have more than one public function that can be invoked by a transaction. Each function may either cause the state to be updated or simply returns the latest state. For example, a standard fungible token smart contract typically has the following functions useful in scenarios such as payments and commodity trading:
+
+Functions that update states (require transactions to invoke):
+transfer(to, amount)
+approve(delegate, amount)
+transferFrom(from, to, amount)
+mint(to, amount)
+burn(from, amount)
+
+Functions that query the latest states (do not require transactions to invoke):
+balanceOf(account)
+
+If the state needs to be updated, it must be done via a transaction and be processed through the full transaction cycle. Due to the decentralized nature of blockchain architecture, transactions must be handled by a consensus mechanism, so that the system ensures all the copies maintained by the blockchain network’s participating nodes have identical records.
+
+> Updating state requires transaction processing with consensus from the whole network
+
 <p align="center">
   <img width="600" src="/img/Smart-Contract_Explained_2.jpg">
 </p>
+
+On the other hand, querying for the latest state without updating it can be accomplished much faster and involves only a single node in the network. Any node that has the smart contract installed locally can execute the query request and return the result by reading from the locally maintained state database.
+
+> Querying smart contracts for latest state can be accomplished with a single node
 
 <p align="center">
   <img width="600" src="/img/Smart-Contract_Explained_3.jpg">
 </p>
 
+Source [here](https://www.kaleido.io/blockchain-blog/what-are-smart-contracts-and-how-do-they-work).
 
 ## CosmWasm
 
