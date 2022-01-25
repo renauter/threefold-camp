@@ -20,7 +20,7 @@ The main purpose of smart contracts is to maintain program states. State is an a
 
 Each smart contract maintains its own set of states. Most transactions submitted to a blockchain target a smart contract, with the exception of pure value transfers that do not involve smart contracts. Once a transaction is executed, the target smart contract updates its state. A smart contract can call another smart contract, in order to query the downstream contract’s state or update it.
 
-![Smart Contract](/img/Blockchain-Smart-Contract.jpg)
+<img align="center" width="800" src="/img/Blockchain-Smart-Contract.jpg">
 
 ## Anatomy of a Smart Contract
 
