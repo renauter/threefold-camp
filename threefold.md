@@ -24,15 +24,19 @@ The Internet is owned by the people.
 `compute` / `store` / `network`
 
 ### Storage
-Zdb = Zero Database
-	operating in an "append only" manner, periodically "compacting" the data, to remove what's no longer needed
+
+Zdb = Zero Database, operating in an "append only" manner, periodically "compacting" the data, to remove what's no longer needed
+	
 Zdbfs = Zdb Filesystem ( single node only)
+
 Zstor solution for spreading data across multiple nodes
-	Erasure Encoding: With basic redundancy, four extra copies would be needed 
-	same failure tolerance using less than half the space needed for the original data
+Erasure Encoding: With basic redundancy, four extra copies would be needed 
+same failure tolerance using less than half the space needed for the original data
+	
 QSFS = Quantum Safe Filesystem, TF's flagship storage solution
 
 ### Compute = process the data
+
 ThreeFold Compute Primitives
 Zmachine = lightweight virtual machine (VM)
 Flist = next generation container format which extends the industry standard Docker container concept in an efficient and secure way
