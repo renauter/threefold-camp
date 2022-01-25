@@ -8,9 +8,11 @@ The Cosmos SDK is written in Golang based on certain design considerations to al
 
 IBC = INTER-BLOCKCHAIN COMMUNICATION PROTOCOL
 
-https://ibcprotocol.org/
+<p align="center">
+  <img width="800" src="/img/IBC.jpg">
+</p>
 
-![IBC](/img/IBC.jpg)
+Source [here](https://ibcprotocol.org/).
 
 ## Smart Contract
 
