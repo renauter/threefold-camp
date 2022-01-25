@@ -100,3 +100,15 @@ CosmWasm is designed and built from the ground-up to be a multi-chain solution f
 As it comes from the Cosmos ecosystem, it is designed for networks of blockchains, rather than siloed chains.
 
 Source [here](https://docs.cosmwasm.com/docs/1.0/).
+
+CosmWasm = The Smart Contract Platform for Cosmos
+
+Before CosmWasm, if you had to run logic on Cosmos SDK platform, you’d have to depend upon using GoLang to make changes to the source code. CosmWasm is a module you can now plug onto your present ecosystem, and write code in a bunch of languages and deploy it to your network. This is done via Web Assembly. You can read more about Web Assembly here. We will be using Rust in our series.
+
+CosmWasm allows multi-chain contracts to be built. It is pretty easy to integrate since it has little requirements on host.
+
+This allows CosmWasm to run agnostic of the chain it is running on. Multi-chain contracts also means we would have interblockchain contracts. This is an IBC-first design, allowing the developer to write code for one chain, but running it on another chain for certain processes.
+
+Contracts are different from Modules in Cosmos. You can upload and edit contracts to the chain.
+
+Source [here](https://hackmd.io/@abhinavmir/cosmwasm1).
