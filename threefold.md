@@ -21,7 +21,7 @@
 ## Decentralized Peer-to-peer Cloud
 
 The Internet is owned by the people.
-'compute' / 'store' / 'network'
+`compute` / `store` / `network`
 
 ### Storage
 Zdb = Zero Database
