@@ -1,1 +1,3 @@
 # threefold-camp
+
+Here are some notes realted to my deep dive into Threefold concepts...
