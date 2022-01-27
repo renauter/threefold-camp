@@ -13,18 +13,21 @@ Cosmos blockchains operate by sending various kinds messages around. Messages ar
 
 We'll see a lot of CosmosMsg messages in our contract work, including:
 
-BankMsg
-StakingMsg
-DistributionMsg
-IbcMsg
-WasmMsg
-GovMsg
-But the primary types of messages we need to worry about are the messages interacting with our smart contract.
+- BankMsg
+- StakingMsg
+- DistributionMsg
+- IbcMsg
+- WasmMsg
+- GovMsg
+
+`But the primary types of messages we need to worry about are the messages interacting with our smart contract.`
+
 All smart contracts need to handle three kinds of incoming messages:
 
-InstantiateMsg: what happens when an instance of a smart contract is created (startup code)
-ExecuteMsg: the kinds of actions users can tell a smart contract to execute (write operations)
-QueryMsg: the kinds of queries for information users can send to a smart contract (read operations)
+- InstantiateMsg: what happens when an instance of a smart contract is created (startup code)
+- ExecuteMsg: the kinds of actions users can tell a smart contract to execute (write operations)
+- QueryMsg: the kinds of queries for information users can send to a smart contract (read operations)
+
 Incoming messages of these three types will be passed off to our contract's entry points: the instantiate(), execute(), and query() functions. These may be indicated in the template you pull with the macro attribute
 
 #[entry_point]
