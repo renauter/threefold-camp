@@ -9,7 +9,10 @@ https://academy.terra.money/courses/take/cosmwasm-smart-contracts-i/lessons/2669
 ## Messages in CosmWasm
 
 Before you view the Quick Start Contract Walkthrough, it's helpful to talk briefly about messages.
-Cosmos blockchains operate by sending various kinds messages around. Messages are sent from users to contracts, from contracts to contracts, and even from contracts to other blockchains. Blockchain platforms are, after all, protocols for sending, processing, and logging authorized messages around. Most of these messages are commands to do something, but some are just queries for information.
+Cosmos blockchains operate by sending various kinds messages around.
+Messages are sent from users to contracts, from contracts to contracts, and even from contracts to other blockchain.
+Blockchain platforms are, after all, protocols for sending, processing, and logging authorized messages around.
+Most of these messages are commands to do something, but some are just queries for information.
 
 We'll see a lot of CosmosMsg messages in our contract work, including:
 
@@ -31,8 +34,10 @@ All smart contracts need to handle three kinds of incoming messages:
 Incoming messages of these three types will be passed off to our contract's entry points: the instantiate(), execute(), and query() functions. These may be indicated in the template you pull with the macro attribute
 
 #[entry_point]
+
 which you should now replace with:
 
 #[cfg_attr(not(feature = "library"), entry_point)]
+
 All of our core code will be located in these three functions, or in functions called by these three functions.
 
