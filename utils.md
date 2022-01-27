@@ -33,11 +33,11 @@ All smart contracts need to handle three kinds of incoming messages:
 
 Incoming messages of these three types will be passed off to our contract's entry points: the instantiate(), execute(), and query() functions. These may be indicated in the template you pull with the macro attribute
 
-#[entry_point]
+> #[entry_point]
 
 which you should now replace with:
 
-#[cfg_attr(not(feature = "library"), entry_point)]
+> #[cfg_attr(not(feature = "library"), entry_point)]
 
 All of our core code will be located in these three functions, or in functions called by these three functions.
 
