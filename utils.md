@@ -41,3 +41,18 @@ which you should now replace with:
 
 All of our core code will be located in these three functions, or in functions called by these three functions.
 
+## Quick Start: CosmWasm Contract Walkthrough
+
+NOTE: In order for this tutorial to generate the template smart contract correctly, make sure you run this command from terminal:
+
+> cargo install cargo-generate --features vendored-openssl
+
+ALSO:  Note that instead of the #[entry_point] macro attribute, the following should now be used as of CosmWasm 0.16:
+
+> #[cfg_attr(not(feature = "library"), entry_point)]
+
+We can learn a lot about CosmWasm smart contracts – and get a good start on our own – by pulling the CosmWasm Template Smart Contract.
+
+For experienced programmers, this is the perfect video to get started.
+
+For beginners, you should watch this video, but it and the accompanying exercise may be a little too much for you. If so, no worries! Come back once you've completed more of the main course content and exercises, and you should find yourself easily following along with the concepts.
