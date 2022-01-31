@@ -113,6 +113,14 @@ Contracts are different from Modules in Cosmos. You can upload and edit contract
 
 Source [here](https://hackmd.io/@abhinavmir/cosmwasm1).
 
+## Terra
+
+To have a local Terra tesnet
+
+> git clone https://github.com/terra-project/localterra
+> cd localterra
+> docker-compose up
+
 ## Terrain
 
  https://github.com/iboss-ptk/terrain
