@@ -112,3 +112,16 @@ This allows CosmWasm to run agnostic of the chain it is running on. Multi-chain 
 Contracts are different from Modules in Cosmos. You can upload and edit contracts to the chain.
 
 Source [here](https://hackmd.io/@abhinavmir/cosmwasm1).
+
+## Terrain
+
+ https://github.com/iboss-ptk/terrain
+ 
+Terrain = Framework that makes testing and deploying smart contracts easier locally, on testnet, and on mainnet. Terrain is at https://github.com/iboss-ptk/terrain. The install command shown is:
+
+> npm install -g @iboss/terrain
+
+If you need Node Version Manager first to enable the nvm and npm commands, go to https://github.com/nvm-sh/nvm.
+The install command depends on the version you'd like to install; as of this video, it is:
+
+> curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
