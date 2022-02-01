@@ -227,8 +227,10 @@ see network config on config.terrain.json file
 > terrain console --network testnet
 > (await client.bank.balance(wallets.custom_tester_1.key.accAddress))[0]
 
-> terrain deploy counter --signer custom_tester_1 --network testnet
- 
 now you should see what is on wallet
-to explore what happens go to https://finder.terra.money/ and look for the contract address
+
+> terrain deploy counter --signer custom_tester_1 --network testnet
+
+to have a look to what happens go to https://finder.terra.money/ (or another block explorer) and look for the contract address
 The contract address is given after deploying is successful 
+Another block explorer https://finder.extraterrestrial.money/
