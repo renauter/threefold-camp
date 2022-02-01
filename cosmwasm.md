@@ -176,9 +176,30 @@ To make sure all my dependencies of my directory are installed:
 
 > npm install
 
-Now we have Terrain set up and ready to deploy our app and edit the template counter code with VS:
+Now we have Terrain set up and ready to deploy our app and view/edit the template counter code with VS:
 
 > code .
 
+Make sure local Terra is running before deplying counter contract using:
 
+> terrain deploy counter --signer validator
 
+How to interact with the contract thanks to helpers in the lib/index.js file.
+First we need to run Terrain console:
+
+> terrain console
+
+And then interact:
+
+> await lib.increment()
+> await lib.getCount()
+
+Now let's deploy the Terrain React Frontend!
+I need to synchronize because my frontend need to with which contract it is talking to:
+
+> terrain sync-refs
+> cd frontend
+> npm install
+> npm start
+
+And it will open browser at http://localhost:3000/
