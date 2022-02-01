@@ -203,3 +203,32 @@ I need to synchronize because my frontend need to with which contract it is talk
 > npm start
 
 And it will open browser at http://localhost:3000/
+
+Deploy on Terra tesnet:
+- Go to wallet chrome extension chrome-extension://aiifbnbfobpmeekipheeijimdpnlpgpp/index.html#/wallet
+- Get 1000 Luna https://faucet.terra.money/
+
+> terrain console
+
+check account address to be the same as wallet
+custom_tester_1 comes from keys.terrain.js file
+
+> wallets.custom_tester_1.key.accAddress
+
+check the account balance:
+
+> (await client.bank.balance(wallets.custom_tester_1.key.accAddress))[0]
+> (await client.bank.balance(wallets.custom_tester_1.key.accAddress))[1]
+
+should show what is on local Terra
+Let's go to testnet now!
+see network config on config.terrain.json file
+
+> terrain console --network testnet
+> (await client.bank.balance(wallets.custom_tester_1.key.accAddress))[0]
+
+> terrain deploy counter --signer custom_tester_1 --network testnet
+ 
+now you should see what is on wallet
+to explore what happens go to https://finder.terra.money/ and look for the contract address
+The contract address is given after deploying is successful 
