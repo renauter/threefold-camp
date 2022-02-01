@@ -115,6 +115,7 @@ Source [here](https://hackmd.io/@abhinavmir/cosmwasm1).
 
 ## Terra
 
+https://docs.terra.money/docs/develop/how-to/localterra/README.html
 To have a local Terra tesnet
 
 > git clone https://github.com/terra-project/localterra
@@ -123,13 +124,61 @@ To have a local Terra tesnet
 
 ## Terrain
 
- https://github.com/iboss-ptk/terrain
- 
-Terrain = Framework that makes testing and deploying smart contracts easier locally, on testnet, and on mainnet. Terrain is at https://github.com/iboss-ptk/terrain. The install command shown is:
+make sure Rust setup is OK:
 
-> npm install -g @iboss/terrain
+> rustup default stable
 
+make sure we added the wasm target:
+
+> rustup target add wasm32-unknown-unknown
+
+install cargo-generate:
+
+> cargo install cargo-generate --features vendored-openssl
+
+install cargo-run-script (needed to run contract code optimizer):
+
+> cargo install cargo-run-script
+
+Recommended to isntall nvm
 If you need Node Version Manager first to enable the nvm and npm commands, go to https://github.com/nvm-sh/nvm.
+Node.js = an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser. 
 The install command depends on the version you'd like to install; as of this video, it is:
 
 > curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+Close and reopen your terminal to start using nvm or run the following to use it now:
+
+> export NVM_DIR="$HOME/.nvm"
+> [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+> [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+Use a certain version of Node.js (here 16):
+
+> nvm install 16
+
+or if already installed
+
+> nvm use 16
+
+Terrain = Framework that makes testing and deploying smart contracts easier locally, on testnet, and on mainnet.
+Terrain is at https://github.com/iboss-ptk/terrain.
+The command shown is to install Terrain package globaly (-g):
+
+> npm install -g @iboss/terrain
+
+Now able to create an app using Terrain
+
+> terrain new raffle-dapp
+> cd raffle-dapp
+
+To make sure all my dependencies of my directory are installed:
+
+> npm install
+
+Now we have Terrain set up and ready to deploy our app and edit the template counter code with VS:
+
+> code .
+
+
+
