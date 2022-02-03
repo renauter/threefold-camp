@@ -87,6 +87,33 @@ Different blockchain designs handles this requirement differently, but there are
 
 Source [here](https://www.kaleido.io/blockchain-blog/what-are-smart-contracts-and-how-do-they-work).
 
+## General considerations for Smart Contracts
+
+Implications of determinism = Every input into the blockchain must result in an expected output, or the execution of code is not verifiable by the network. This means that a smart contract cannot:
+
+- generate a random number by itself
+- get outside information (other than information from connected oracles)
+
+Your application design should bear these in mind. Randomness is achievable by using various non-trivial techniques, but pseudo-randomness, though tempting, should be avoided as it can be gamed.
+
+You should also remember that economy is an important goal.
+Use smart contracts sparingly!
+The best smart contracts do `simple things`.
+
+Using your smart contract to store absolutely everything – such as whether users prefer light or dark mode for your interface – is not ideal.
+It will result in slower and more expensive experiences for your users.
+Instead, only use your smart contract for the things which need the guarantees smart contracts offer, such as:
+
+- immutability
+- seizure resistance
+- censorship resistance
+- auditability
+
+Handle aspects which do not require these things elsewhere: for example, storing user preferences and avatars or temporary data for a user session should generally be handled by off-chain storage.
+This storage can still be decentralized or attack-resistant to some degree (by using IPFS, for example), but is inappropriate for smart contracts.
+
+Your contract cannot be used to do very intense computation – all computation has a hard limit. It has to fit in a block time, after all. If you need intense computation in your app, investigate ways to handle this elsewhere. Depending on your particular app, perhaps the computation can still be performed in a verifiable way.
+
 ## CosmWasm
 
 CosmWasm, a project enabling WebAssembly (WASM) virtual machines (VMs) in the Cosmos SDK
@@ -234,3 +261,4 @@ now you should see what is on wallet
 to have a look to what happens go to https://finder.terra.money/ (or another block explorer) and look for the contract address
 The contract address is given after deploying is successful 
 Another block explorer https://finder.extraterrestrial.money/
+
