@@ -201,7 +201,9 @@ nvm install 16
 ```
 or if already installed
 
-> nvm use 16
+```sh
+nvm use 16
+```
 
 Terrain = Framework that makes testing and deploying smart contracts easier locally, on testnet, and on mainnet.
 Terrain is at https://github.com/iboss-ptk/terrain.
