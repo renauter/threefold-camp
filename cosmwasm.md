@@ -145,45 +145,60 @@ Source [here](https://hackmd.io/@abhinavmir/cosmwasm1).
 https://docs.terra.money/docs/develop/how-to/localterra/README.html
 To have a local Terra tesnet
 
-> git clone https://github.com/terra-project/localterra
-> cd localterra
-> docker-compose up
+```sh
+git clone https://github.com/terra-project/localterra
+cd localterra
+docker-compose up
+```
 
 ## Terrain
 
 make sure Rust setup is OK:
 
-> rustup default stable
+```sh
+rustup default stable
+```
 
 make sure we added the wasm target:
 
-> rustup target add wasm32-unknown-unknown
+```sh
+rustup target add wasm32-unknown-unknown
+```
 
 install cargo-generate:
 
-> cargo install cargo-generate --features vendored-openssl
+```sh
+cargo install cargo-generate --features vendored-openssl
+```
 
 install cargo-run-script (needed to run contract code optimizer):
 
-> cargo install cargo-run-script
+```sh
+cargo install cargo-run-script
+```
 
-Recommended to isntall nvm
+Recommended to install nvm
 If you need Node Version Manager first to enable the nvm and npm commands, go to https://github.com/nvm-sh/nvm.
 Node.js = an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser. 
 The install command depends on the version you'd like to install; as of this video, it is:
 
-> curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+```sh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+```
 
 Close and reopen your terminal to start using nvm or run the following to use it now:
 
-> export NVM_DIR="$HOME/.nvm"
-> [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-> [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+```sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+```
 
 Use a certain version of Node.js (here 16):
 
-> nvm install 16
-
+```sh
+nvm install 16
+```
 or if already installed
 
 > nvm use 16
@@ -192,42 +207,58 @@ Terrain = Framework that makes testing and deploying smart contracts easier loca
 Terrain is at https://github.com/iboss-ptk/terrain.
 The command shown is to install Terrain package globaly (-g):
 
-> npm install -g @iboss/terrain
+```sh
+npm install -g @iboss/terrain
+```
 
 Now able to create an app using Terrain
 
-> terrain new raffle-dapp
-> cd raffle-dapp
+```sh
+terrain new raffle-dapp
+cd raffle-dapp
+```
 
 To make sure all my dependencies of my directory are installed:
 
-> npm install
+```sh
+npm install
+```
 
 Now we have Terrain set up and ready to deploy our app and view/edit the template counter code with VS:
 
-> code .
+```sh
+code .
+```
 
 Make sure local Terra is running before deplying counter contract using:
 
-> terrain deploy counter --signer validator
+```sh
+terrain deploy counter --signer validator
+```
 
 How to interact with the contract thanks to helpers in the lib/index.js file.
 First we need to run Terrain console:
 
-> terrain console
+```sh
+terrain console
+```
 
 And then interact:
 
-> await lib.increment()
-> await lib.getCount()
+```sh
+await lib.increment()
+await lib.getCount()
+```
 
 Now let's deploy the Terrain React Frontend!
 I need to synchronize because my frontend need to with which contract it is talking to:
 
-> terrain sync-refs
-> cd frontend
-> npm install
-> npm start
+```sh
+terrain sync-refs
+cd frontend
+npm install
+npm start
+```
 
 And it will open browser at http://localhost:3000/
 
@@ -235,28 +266,37 @@ Deploy on Terra tesnet:
 - Go to wallet chrome extension chrome-extension://aiifbnbfobpmeekipheeijimdpnlpgpp/index.html#/wallet
 - Get 1000 Luna https://faucet.terra.money/
 
-> terrain console
-
+```sh
+terrain console
+```
 check account address to be the same as wallet
 custom_tester_1 comes from keys.terrain.js file
 
-> wallets.custom_tester_1.key.accAddress
+```sh
+wallets.custom_tester_1.key.accAddress
+```
 
 check the account balance:
 
-> (await client.bank.balance(wallets.custom_tester_1.key.accAddress))[0]
-> (await client.bank.balance(wallets.custom_tester_1.key.accAddress))[1]
+```sh
+(await client.bank.balance(wallets.custom_tester_1.key.accAddress))[0]
+(await client.bank.balance(wallets.custom_tester_1.key.accAddress))[1]
+```
 
 should show what is on local Terra
 Let's go to testnet now!
 see network config on config.terrain.json file
 
-> terrain console --network testnet
-> (await client.bank.balance(wallets.custom_tester_1.key.accAddress))[0]
+```sh
+terrain console --network testnet
+(await client.bank.balance(wallets.custom_tester_1.key.accAddress))[0]
+```
 
 now you should see what is on wallet
 
-> terrain deploy counter --signer custom_tester_1 --network testnet
+```sh
+terrain deploy counter --signer custom_tester_1 --network testnet
+```
 
 to have a look to what happens go to https://finder.terra.money/ (or another block explorer) and look for the contract address
 The contract address is given after deploying is successful 
