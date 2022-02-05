@@ -49,13 +49,13 @@ All of our core code will be located in these three functions, or in functions c
 
 NOTE: In order for this tutorial to generate the template smart contract correctly, make sure you run this command from terminal:
 
-```
+```sh
 cargo install cargo-generate --features vendored-openssl
 ```
 
 ALSO:  Note that instead of the #[entry_point] macro attribute, the following should now be used as of CosmWasm 0.16:
 
-```
+```sh
 #[cfg_attr(not(feature = "library"), entry_point)]
 ```
 
@@ -65,17 +65,21 @@ For experienced programmers, this is the perfect video to get started.
 
 For beginners, you should watch this video, but it and the accompanying exercise may be a little too much for you. If so, no worries! Come back once you've completed more of the main course content and exercises, and you should find yourself easily following along with the concepts.
 
-> cargo test
-> cargo schema
-> cargo fmt --all -- --check
+```sh
+cargo test
+cargo schema
+cargo fmt --all -- --check
+```
 
 ## Installing Rust
 
-> curl https://sh.rustup.rs | bash
+```sh
+curl https://sh.rustup.rs | bash
+```
 
 ## Learn Rust with Rustlings 
 
-```
+```sh
 sudo apt update
 sudo apt install build-essential
 curl -L https://git.io/install-rustlings | bash
