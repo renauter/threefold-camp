@@ -68,8 +68,13 @@ For beginners, you should watch this video, but it and the accompanying exercise
 ## Learn Rust with Rustlings 
 
 > sudo apt update
+> 
 > sudo apt install build-essential
+> 
 > curl -L https://git.io/install-rustlings | bash
+> 
 > cd rustlings
+> 
 > code .
+> 
 > rustlings watch
