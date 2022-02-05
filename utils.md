@@ -56,3 +56,20 @@ We can learn a lot about CosmWasm smart contracts – and get a good start on ou
 For experienced programmers, this is the perfect video to get started.
 
 For beginners, you should watch this video, but it and the accompanying exercise may be a little too much for you. If so, no worries! Come back once you've completed more of the main course content and exercises, and you should find yourself easily following along with the concepts.
+
+> cargo test
+> cargo schema
+> cargo fmt --all -- --check
+
+## Installing Rust
+
+> curl https://sh.rustup.rs | bash
+
+## Learn Rust with Rustlings 
+
+> sudo apt update
+> sudo apt install build-essential
+> curl -L https://git.io/install-rustlings | bash
+> cd rustlings
+> code .
+> rustlings watch
