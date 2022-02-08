@@ -38,7 +38,7 @@ The Internet is owned by the people.
 - External Contractor => external service providers from the “central world” are probably unavoidable
 
 <p align="center">
-  <img width="800" src="/img/dao_components.jpg">
+  <img width="600" src="/img/dao_components.jpg">
 </p>
 
 ### Unexplained questions
