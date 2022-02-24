@@ -27,6 +27,16 @@ You can also access the key from Windows file manager in the following folder:
 \\wsl$\\Ubuntu\home\<username>\.ssh\
 ```
 
+Your private key will be generated using the default name (`id_rsa`) or the filename you specified.
+The corresponding public key will be generated using the same filename but with a `.pub` extension added.
+If you open the public key in a text editor it should contain something similar to this:
+
+```
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNqqi1mHLnryb1FdbePrSZQdmXRZxGZbo0gTfglysq6KMNUNY2VhzmYN9JYW39yNtjhVxqfW6ewc+eHiL+IRRM1P5ecDAaL3V0ou6ecSurU+t9DR4114mzNJ5SqNxMgiJzbXdhR+j55GjfXdk0FyzxM3a5qpVcGZEXiAzGzhHytUV51+YGnuLGaZ37nebh3UlYC+KJev4MYIVww0tWmY+9GniRSQlgLLUQZ+FcBUjaqhwqVqsHe4F/woW1IHe7mfm63GXyBavVc+llrEzRbMO111MogZUcoWDI9w7UIm8ZOTnhJsk7jhJzG2GpSXZHmly/a/buFaaFnmfZ4MYPkgJD username@example.com
+```
+
+Copying the entire text you can specify your public SSH key while configuring a VM (see ![here](weblets_virtualmachine.md)).
+
 ## Connect to remote host with SSH
 
 With the SSH key you should be able to SSH to your account on the remote system from the computer that has your private key using the following command:
